@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafeConsole", "Challe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoTest", "KomodoTest\KomodoTest.csproj", "{DA8C9B2E-5909-4D07-BDB5-E620E271DDDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Komodo_ClaimRepo", "ClaimRepository\Komodo_ClaimRepo.csproj", "{5F5A844A-20FE-4D7F-8FC3-9BF8B2090D59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Komodo_ClaimsConsole", "Komodo_ClaimsConsole\Komodo_ClaimsConsole.csproj", "{2FACDAA4-A3C5-4B10-9187-C7C79761C02C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Komodo_ClaimsTest", "Komodo_ClaimsTest\Komodo_ClaimsTest.csproj", "{F49E0D38-EF9C-4021-A0FE-C02ED435AA25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{DA8C9B2E-5909-4D07-BDB5-E620E271DDDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA8C9B2E-5909-4D07-BDB5-E620E271DDDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA8C9B2E-5909-4D07-BDB5-E620E271DDDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F5A844A-20FE-4D7F-8FC3-9BF8B2090D59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F5A844A-20FE-4D7F-8FC3-9BF8B2090D59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F5A844A-20FE-4D7F-8FC3-9BF8B2090D59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F5A844A-20FE-4D7F-8FC3-9BF8B2090D59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FACDAA4-A3C5-4B10-9187-C7C79761C02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FACDAA4-A3C5-4B10-9187-C7C79761C02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FACDAA4-A3C5-4B10-9187-C7C79761C02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FACDAA4-A3C5-4B10-9187-C7C79761C02C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49E0D38-EF9C-4021-A0FE-C02ED435AA25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49E0D38-EF9C-4021-A0FE-C02ED435AA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49E0D38-EF9C-4021-A0FE-C02ED435AA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49E0D38-EF9C-4021-A0FE-C02ED435AA25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

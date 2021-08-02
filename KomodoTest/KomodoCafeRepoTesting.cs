@@ -33,7 +33,7 @@ namespace Challenge01Repo.KomodoTest
 
             //Act
             repository.AddMenuToList(menu);
-            MenuItems listFromMenu = repository.GetMenuByName("Tacos");
+            MenuItems listFromMenu = repository.GetMenuByNumber(2);
             //Assert
             Assert.IsNotNull(listFromMenu);
 
@@ -42,7 +42,7 @@ namespace Challenge01Repo.KomodoTest
         [TestMethod]
         public void DeleteMenu_ShouldReturnTrue()
         {
-            bool deleteResult = _menu1.DelectMenuFromList(_repo.MealName);
+            bool deleteResult = _menu1.DelectMenuFromList(_repo.MealNumber);
             //Assert
             Assert.IsTrue(deleteResult);
         }
