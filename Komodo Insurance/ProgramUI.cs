@@ -36,18 +36,18 @@ namespace Komodo_Insurance
                         UpdateBadge();
                         break;
                     case "3":
-
+                        ListOfBadges();
 
                         break;
                     case "4":
-                        break;
-                    case "5":
                         keepRunning = false;
                         break;
+                    
                     default:
                         Console.WriteLine("Please enter a valid number");
                         break;
                 }
+                Console.WriteLine(" ");
             Console.WriteLine("Please Press any Key to continue............");
             Console.ReadKey();
             Console.Clear();
@@ -96,13 +96,73 @@ namespace Komodo_Insurance
 
         private void UpdateBadge()
         {
+            Console.Clear();
             Console.WriteLine("What Badge Number are you updating?:");
             int input = int.Parse( Console.ReadLine());
             var badge = _repo.GetBadgeByBadgeId(input);
+            
             string response = string.Join("$ ", badge.Value);
-            Console.WriteLine($"{badge.Key} has access to doors : {response}");
+            Console.WriteLine($"{badge.Key} has access to doors : {response}\n" +
+                $"\n");
+            Console.WriteLine("what would you like to do, Select the right option:?\n" +
+                "\t\t 1.Remove Door\n" +
+                "\t\t 2.Add a doo");
+            string response3 = Console.ReadLine();
+            switch (response3)
+            {
+                case "1":
+                    Console.Write("What door do you want to remove?:");
+                    string response4 = Console.ReadLine();
+                    if (badge.Value.Contains(response4))
+                    {
+                        int number = badge.Value.Count;
+                        if (number == 0)
+                        {
+                            Console.WriteLine($"Badge Number {badge.Key}  do not have any door associated to it");
+                        }
+                        badge.Value.Remove(response4);
+                        Console.WriteLine("Door removed");
+                        string response5 = string.Join("$ ", badge.Value);
+                       
+                        Console.WriteLine($"{badge.Key} has access to doors : {response5}\n" +
+                        $"\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"This door:{response3} is not connected to this badge");
+                    }
+                    break;
+                case "2":
+                    Console.WriteLine("What door do you want to add");
+                    string input1 = Console.ReadLine();
+                    badge.Value.Add(input1);
+                    Console.WriteLine("door added successfully");
+
+                    string input2 = string.Join("$ ", badge.Value);
+
+                    Console.WriteLine($"{badge.Key} has access to doors : {input2}\n" +
+                    $"\n");
+                    break;
+
+                default:
+                    Console.WriteLine("Please enter a valid Number");
+                    break;
+            }
 
 
+        }
+
+        private  void ListOfBadges()
+        {
+            Console.Clear();
+            var Badges = _repo.GetDictionary();
+            Console.WriteLine($"{"Badge#",-10}{"Door Access"}");
+            foreach (var item in Badges)
+
+            {
+              
+                Console.WriteLine($"{item.Key,-10} {string.Join(",", item.Value)}");
+            }
         }
 
 
@@ -132,7 +192,7 @@ namespace Komodo_Insurance
 
         public void SeedContent()
         {
-            BadgeProperties badge1 = new BadgeProperties(1235, new List<string> { "Door3" }, "DoorNAME1");
+            BadgeProperties badge1 = new BadgeProperties(1235,  new List<string> { "Door3" }, "DoorNAME1");
 
             _repo.Addbadge(badge1);
 
